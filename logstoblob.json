@@ -34,12 +34,6 @@
                 "description": "Environment Specific tag"
             }
         },
-        "app_settings": {
-            "type": "string"
-        },
-        "staging_app_settings": {
-            "type": "string"
-        },
         "stagingSlotName": {
             "type": "string",
             "defaultValue": "staging",
@@ -129,8 +123,6 @@
         }
     },
     "variables": {
-        "base64AppSettingObject": "[base64(parameters('app_settings'))]",
-        "base64SlotAppSettingObject": "[base64(parameters('staging_app_settings'))]",
         "trafficmanager": "[concat('hmcts-', parameters('name'),'.trafficmanager.net')]",
         "serverFarmId": "[ResourceId(parameters('asp_rg'),'Microsoft.Web/serverfarms', parameters('asp_name'))]",
         "blobContainerName": "[toLower(parameters('blobContainerName'))]",
@@ -315,15 +307,6 @@
                     }
                 },
                 {
-                    "apiVersion": "2016-08-01",
-                    "name": "appsettings",
-                    "type": "config",
-                    "dependsOn": [
-                        "[concat('Microsoft.Web/sites/', parameters('Name'))]"
-                    ],
-                    "properties": "[base64ToJson(variables('base64AppSettingObject'))]"
-                },
-                {
                     "apiVersion": "2018-02-01",
                     "type": "config",
                     "name": "logs",
@@ -372,15 +355,6 @@
                 "httpsOnly": "[bool(parameters('https_only'))]"
             },
             "resources": [
-                {
-                    "apiVersion": "2016-08-01",
-                    "name": "appsettings",
-                    "type": "config",
-                    "dependsOn": [
-                        "[concat('Microsoft.Web/sites/', parameters('name'), '/slots/', parameters('stagingSlotName'))]"
-                    ],
-                    "properties": "[base64ToJson(variables('base64SlotAppSettingObject'))]"
-                },
                 {
                     "apiVersion": "2018-02-01",
                     "type": "config",

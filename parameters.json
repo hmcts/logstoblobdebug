@@ -4,7 +4,7 @@
     "parameters": {
 
         "name": {
-            "value": "logstoblob"
+            "value": "logstoblob-debug"
         },
         "env": {
             "value": "test-sandbox"
@@ -16,19 +16,13 @@
             "value": "UK South"
         },
         "instance_size": {
-            "value": "12"
+            "value": "I1"
         },
         "asp_name": {
-            "value": "logstoblob-test-sandbox"
+            "value": "logstoblob-debug"
         },
         "asp_rg": {
-            "value": "logstoblob-test-sandbox"
-        },
-        "app_settings": {
-            "value": ""
-        },
-        "staging_app_settings": {
-            "value": ""
+            "value": "logstoblob-debug"
         },
         "storageAccountName": {
             "value": "mgmtapplogs"
