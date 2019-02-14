@@ -116,7 +116,7 @@
         },
         "diagnosticsLogsRetentionInDays": {
             "type": "int",
-            "defaultValue": 35,
+            "defaultValue": 90,
             "metadata": {
                 "description": "Number of days for which the diagnostics logs will be retained."
             }

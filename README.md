@@ -1,9 +1,11 @@
-# logstoblobdebug
-
-# postgres-arm-bug-reproducer
+# logstoblobdebug-arm-bug-reproducer
 
 Update these values in parameters.json
+
 ```
+"env": {
+    "value": "environment name"
+    },
 "asp_name": {
     "value": "asp name"
     },
