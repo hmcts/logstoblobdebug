@@ -1,0 +1,43 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2014-04-01-preview/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+
+        "name": {
+            "value": "logstoblob"
+        },
+        "env": {
+            "value": "test-sandbox"
+        },
+        "teamName": {
+            "value": "Devops Team"
+        },
+        "location": {
+            "value": "UK South"
+        },
+        "instance_size": {
+            "value": "12"
+        },
+        "asp_name": {
+            "value": "logstoblob-test-sandbox"
+        },
+        "asp_rg": {
+            "value": "logstoblob-test-sandbox"
+        },
+        "app_settings": {
+            "value": ""
+        },
+        "staging_app_settings": {
+            "value": ""
+        },
+        "storageAccountName": {
+            "value": "mgmtapplogs"
+        },
+        "blobContainerName": {
+            "value": "logsprodslot"
+        },
+        "stagingBlobContainerName": {
+            "value": "logsstagingslot"
+        }
+    }
+}
